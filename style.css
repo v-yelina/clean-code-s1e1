@@ -12,15 +12,15 @@ body {
     text-align: right;
 }
 
-.header img {
+.header__image {
     width: 100%;
 }
 
-.header .more_inf {
+.header__info-link {
     font-family: fantasy, cursive;
 }
 
-@media (max-width:768px) {
+@media (max-width: 768px) {
 
     .header { 
         text-align: center;
@@ -28,7 +28,7 @@ body {
 
 }
 
-.centered-main-page-element {
+.main {
     display: block;
     width: 500px;
     margin: 0 auto 0;
@@ -38,6 +38,19 @@ body {
     width: 56%;
     display: inline-block;
     flex-grow: 1;
+}
+
+.task-input {
+    margin: 0;
+    font-size: 18px;
+    line-height: 18px;
+    height: 21px;
+    padding: 0 9px;
+    border: 1px solid #ddd;
+    background: #fff;
+    border-radius: 6px;
+    font-family: Lato, sans-serif;
+    color: #888;
 }
 
 .task-row-wrapper {
@@ -55,11 +68,13 @@ h3 {
 }
 
 input,
-button{
+button,
+.add-task__button {
     outline: none;
 }
 
-button {
+button,
+.add-task__button {
     background: none;
     border: 0px;
     color: #888;
@@ -69,7 +84,8 @@ button {
     cursor: pointer;
 }
 
-button:hover {
+button:hover,
+.add-task__button {
     color: #3a3a3a;
 }
 
@@ -86,20 +102,7 @@ label[for="new-task"] {
     text-transform: uppercase;
 }
 
-input[type="text"] {
-    margin: 0;
-    font-size: 18px;
-    line-height: 18px;
-    height: 21px;
-    padding: 0 9px;
-    border: 1px solid #ddd;
-    background: #fff;
-    border-radius: 6px;
-    font-family: Lato, sans-serif;
-    color: #888;
-}
-
-input[type="text"]:focus {
+.task:focus {
     color: #333;
 }
 
@@ -110,7 +113,7 @@ label[for="new-task"] {
     margin: 0 0 20px;
 }
 
-input#new-task {
+.add-task__input {
     width: 318px;
 }
 
@@ -145,13 +148,13 @@ li >    input[type="text"] {
     width: 226px;
 }
 
-button.delete img {
+.delete-button img {
     height: 2em;
     transform: rotateZ(45deg);
     transition: transform 200ms ease-in;
 }
 
-button.delete img:hover {
+.delete-button img:hover {
     transform: rotateZ(0);
 }
 
@@ -168,11 +171,11 @@ ul li input[type=text] {
     display: none;
 }
 
-ul li.editMode input[type=text] {
+ul li.edit-mode input[type=text] {
     display: inline-block;
     width: 224px;
 }
 
-ul li.editMode label {
+ul li.edit-mode label {
     display: none;
 }
